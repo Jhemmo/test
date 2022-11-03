@@ -23,6 +23,9 @@ app.use(express.urlencoded({extended:true}));
 app.use("/users", userRoutes);
 app.use("/courses", courseRoutes);
 
+app.get('/',(req,res)=>{
+	res.send("hLLOO")
+})
 
 app.listen(process.env.PORT || 4000, () => {
 	console.log(`API is now online on port ${process.env.PORT || 4000}`);
